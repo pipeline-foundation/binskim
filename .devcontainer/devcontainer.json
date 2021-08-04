@@ -22,7 +22,7 @@
 		"ms-vscode.powershell",
 		"jmrog.vscode-nuget-package-manager",
 	],
-	"postCreateCommand": "",
+	"postCreateCommand": "git submodule update --init && dotnet restore src/BinSkim.sln",
 }
 
 // Built with ❤ by [Pipeline Foundation](https://pipeline.foundation)
