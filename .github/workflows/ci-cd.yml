@@ -69,8 +69,8 @@ jobs:
           $configurationSetting = "Debug"
           $publishOutputFolder = "${{ env.publishOutputFolderName }}"
           $projectVersion = "${{ steps.version_determiner.outputs.project_version }}"
-          $runtimeIdentifiers = "win-x86","win-x64","linux-x64"
           $frameworkVersion = "netcoreapp3.1"
+          $runtimeIdentifiers = "win-x86","win-x64","linux-x64"
 
           foreach ( $runtimeIdentifier in $runtimeIdentifiers ) {
             dotnet publish $pathToProject `
