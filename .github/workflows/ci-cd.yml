@@ -39,6 +39,7 @@ jobs:
           $configurationSetting = "Debug"
 
           dotnet build $pathToSolution `
+          -property:Platform=x64 `
           --configuration $configurationSetting `
           --no-restore
 
@@ -55,6 +56,7 @@ jobs:
             $projectName = $project.Name
 
             dotnet test $project `
+            -property:Platform=x64 `
             --configuration $configurationSetting `
             --logger "trx;LogFileName=$projectName-$date.trx;verbosity=normal" `
             --results-directory $testOutputFolder/$projectName `
