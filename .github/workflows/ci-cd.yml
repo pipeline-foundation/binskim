@@ -79,7 +79,8 @@ jobs:
             --configuration $configurationSetting `
             --output "$publishOutputFolder/$frameworkVersion/$runtimeIdentifier" `
             --framework $frameworkVersion `
-            --runtime $runtimeIdentifier
+            --runtime $runtimeIdentifier `
+            --no-restore
           }
 
       # Artifact publish to pipeline
