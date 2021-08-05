@@ -53,7 +53,7 @@ jobs:
           $testOutputFolder = "${{ env.testResultsFolderName }}"
 
           foreach ( $project in $testProjects ) {
-            $projectName = $project.Name
+            $projectName = (gci $project).BaseName
 
             dotnet test $project `
             -property:Platform=x64 `
