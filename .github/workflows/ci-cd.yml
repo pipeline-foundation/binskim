@@ -55,8 +55,9 @@ jobs:
 
             dotnet test $project `
             --configuration $configurationSetting `
-            --logger "trx;LogFilePath=TestResults.trx;verbosity=normal" `
-            --results-directory $testOutputFolder/$projectName
+            --logger "trx;LogFilePath=$testOutputFolder/$projectName/TestResults.trx;verbosity=normal" `
+            --results-directory $testOutputFolder/$projectName `
+            --no-build
           }
 
       # Artifact generation
